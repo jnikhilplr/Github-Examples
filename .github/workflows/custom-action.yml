@@ -13,3 +13,9 @@ jobs:
       # Use the output from the `hello` step
       - name: Get the Output
         run: echo "The time was ${{ steps.hello.outputs.greeting }}"
+    steps:
+      - name: Step2
+        id: hello1 
+        run: echo "Im here in this step"
+      - name: Get the Output
+        run: echo "The time was ${{ steps.hello.outputs.greeting }}"
